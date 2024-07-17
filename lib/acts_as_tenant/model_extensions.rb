@@ -88,6 +88,14 @@ module ActsAsTenant
             model
           end
 
+          define_method ActsAsTenant.tenant_klass.to_s do
+            if !ActsAsTenant.current_tenant.nil? && send(fkey) == ActsAsTenant.current_tenant.send(pkey)
+              return ActsAsTenant.current_tenant
+            else
+              super()
+            end
+          end
+
           define_method :tenant_modified? do
             will_save_change_to_attribute?(fkey) && persisted? && attribute_in_database(fkey).present?
           end
