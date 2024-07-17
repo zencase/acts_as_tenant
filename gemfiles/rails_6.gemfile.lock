@@ -78,7 +78,7 @@ GEM
     connection_pool (2.4.1)
     crass (1.0.6)
     date (3.3.4)
-    diff-lcs (1.5.0)
+    diff-lcs (1.5.1)
     erubi (1.12.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
@@ -98,6 +98,7 @@ GEM
     marcel (1.0.2)
     method_source (1.0.0)
     mini_mime (1.1.5)
+    mini_portile2 (2.8.7)
     minitest (5.20.0)
     net-imap (0.4.7)
       date
@@ -109,11 +110,8 @@ GEM
     net-smtp (0.4.0)
       net-protocol
     nio4r (2.7.0)
-    nokogiri (1.15.5-arm64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.15.5-x86_64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.15.5-x86_64-linux)
+    nokogiri (1.15.5)
+      mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     parallel (1.23.0)
     parser (3.2.2.4)
@@ -157,18 +155,18 @@ GEM
       connection_pool
     regexp_parser (2.8.3)
     rexml (3.2.6)
-    rspec (3.12.0)
-      rspec-core (~> 3.12.0)
-      rspec-expectations (~> 3.12.0)
-      rspec-mocks (~> 3.12.0)
-    rspec-core (3.12.2)
-      rspec-support (~> 3.12.0)
-    rspec-expectations (3.12.3)
+    rspec (3.13.0)
+      rspec-core (~> 3.13.0)
+      rspec-expectations (~> 3.13.0)
+      rspec-mocks (~> 3.13.0)
+    rspec-core (3.13.0)
+      rspec-support (~> 3.13.0)
+    rspec-expectations (3.13.1)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.12.0)
-    rspec-mocks (3.12.6)
+      rspec-support (~> 3.13.0)
+    rspec-mocks (3.13.1)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.12.0)
+      rspec-support (~> 3.13.0)
     rspec-rails (5.1.2)
       actionpack (>= 5.2)
       activesupport (>= 5.2)
@@ -177,7 +175,7 @@ GEM
       rspec-expectations (~> 3.10)
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
-    rspec-support (3.12.1)
+    rspec-support (3.13.1)
     rubocop (1.57.2)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
@@ -207,9 +205,8 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    sqlite3 (1.6.9-arm64-darwin)
-    sqlite3 (1.6.9-x86_64-darwin)
-    sqlite3 (1.6.9-x86_64-linux)
+    sqlite3 (1.6.9)
+      mini_portile2 (~> 2.8.0)
     standard (1.32.1)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.0)
@@ -235,6 +232,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-22
+  arm64-darwin-23
   x86_64-darwin-20
   x86_64-darwin-21
   x86_64-darwin-22
